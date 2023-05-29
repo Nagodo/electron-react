@@ -18,12 +18,6 @@ class Database {
     
 }
 
-var database;
-
-window.addEventListener('DOMContentLoaded', () => {
-    database = new Database();
-});
-
-
-
-export {}
+export function StartDatabase() {
+    const database = new Database();
+}
