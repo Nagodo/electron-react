@@ -1,14 +1,65 @@
 * {
-    --background-color: rgb(40, 40, 40);
+    --background-color: rgb(20, 20, 20);
+    --color1: rgb(30, 30, 30);
+    --color2: rgb(40, 40, 40);
+    --color3: rgb(50, 50, 50);
+
+    --white: rgb(230, 230, 230);
+
 }
 
 body {
-    background-color: var(--background-color);
+    // background-color: var(--background-color);
+    background-color: white;
 }
 
 .App {
     position: absolute;
     background-color: var(--background-color);
-    width: 100%;
-    height: 100%;
+    width: 1200px;
+    height: 800px;
+}
+
+.navigation {
+    position: absolute;
+    height: 800px;
+    width: 300px;
+    
+
+    .nav-element {
+        display: flex;
+        position: relative;
+        height: 70px;
+        width: 100%;
+
+        background-color: var(--color2);
+        p {
+            font-size: 20px;
+
+            position: absolute;
+
+            left: 20px;
+            color: var(--white);
+        }
+
+        &:hover {
+            background-color: var(--color3);
+            cursor: pointer;
+        }
+
+        &.active {
+            background-color: var(--color3);
+        }
+    }
+
+}
+
+.content {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+    height: 800px;
+    width: 890px;
+
 }

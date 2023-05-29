@@ -5,12 +5,13 @@ let mainWindow: Electron.BrowserWindow | null;
 
 function createWindow() {
     mainWindow = new BrowserWindow({
-        height: 600,
-        width: 800,
+        height: 800,
+        width: 1200,
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js'),
+            preload: path.join(__dirname, 'preload.js')
         },
-        autoHideMenuBar: false,
+        resizable: false,
+        autoHideMenuBar: true,
     });
  
     mainWindow.loadFile(path.join(__dirname, 'index.html'));
